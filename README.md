@@ -1,31 +1,42 @@
 # Tilt-Monitor
 
+## Overview
+Drill Guide Pro is a precision drilling assistance tool designed to improve accuracy and efficiency for professional and DIY drilling tasks. This personal project integrates advanced sensors and microcontrollers to deliver real-time feedback, ensuring precise drill alignment and depth control. The system combines custom hardware and embedded software in a compact, user-friendly package compatible with standard drilling equipment.
+
 ## Objective
-[Brief Objective - Remove this afterwards]
+The goal of Drill Guide Pro was to develop a portable, reliable device that enhances drilling accuracy through sensor-based feedback and automated control. The project focused on integrating multiple sensors and a microcontroller into a cohesive system, prioritizing ease of use, precision, and durability. Key objectives included achieving accurate angle and depth measurements and providing real-time user feedback.
 
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
+### Skills Gained
+- Embedded systems programming for sensor integration and real-time control.
+- Sensor calibration and data processing for precise measurements.
+- PCB design and circuit prototyping for compact hardware.
+- Mechanical design for ergonomic and durable device housing.
+- Firmware development using C/C++ for microcontrollers.
+- Iterative testing and problem-solving to optimize performance.
+- Project planning and technical documentation.
 
-### Skills Learned
-[Bullet Points - Remove this afterwards]
+### Tools and Technologies
+- **Sensors**: MPU-6050 (accelerometer/gyroscope), VL53L0X (ToF distance sensor), Hall-effect sensor.
+- **Microcontroller**: STM32F103 for sensor data processing and feedback control.
+- **Software**: STM32CubeIDE (firmware), KiCAD (PCB design), FreeCAD (mechanical design).
+- **Hardware**: Multimeter, oscilloscope, soldering station for prototyping.
+- **Other**: 3D printer for custom enclosures and mounting components.
 
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+## Development Steps
+1. **Sensor Selection and Integration**  
+   Chose MPU-6050 for tilt/orientation, VL53L0X for depth measurement, and a Hall-effect sensor for drill bit position detection. Interfaced with the STM32F103 using I2C and GPIO for accurate data collection.
 
-### Tools Used
-[Bullet Points - Remove this afterwards]
+2. **Firmware Development**  
+   Wrote firmware to process sensor data in real-time, calculate drill angles, and monitor depth. Implemented a feedback system with LEDs and a vibration motor for user alerts.
 
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+3. **Hardware Design**  
+   Designed a compact PCB to house the STM32F103, sensors, and feedback components, optimized for signal integrity and low power consumption with a rechargeable battery.
 
-## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
+4. **Mechanical Design**  
+   Developed a 3D-printed enclosure for electronics protection and drill mounting, ensuring ergonomic design and operational durability.
 
-Every screenshot should have some text explaining what the screenshot is about.
+5. **Testing and Calibration**  
+   Calibrated sensors and validated system accuracy through real-world drilling tests, achieving ±1° tilt accuracy and ±0.5 mm depth accuracy.
 
-Example below.
-
-*Ref 1: Network Diagram*
+6. **System Integration and Validation**  
+   Integrated all subsystems into a single prototype, testing performance in simulated and actual drilling scenarios to ensure low-latency feedback and reliability.
